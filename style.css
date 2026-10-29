@@ -424,9 +424,22 @@ section {
 .pink { color: #e8b0ad; }
 
 .floating-label {
+    position: absolute;
     z-index: 7;
+
+    padding: 9px 15px;
+
+    background: var(--cream);
+
+    border: 1px dashed #26352c;
     border-radius: 30px;
-    animation: floating 4s ease-in-out infinite;
+
+    font-size: 10px;
+    letter-spacing: 2px;
+
+    box-shadow: var(--shadow);
+
+    animation: float 4s ease-in-out infinite;
 }
 
 .label-one {
@@ -436,7 +449,7 @@ section {
 
 .label-two {
     right: -30px;
-    top: 280px;
+    top: 240px;
     animation-delay: 1s;
 }
 
@@ -446,13 +459,13 @@ section {
     animation-delay: 2s;
 }
 
-@keyframes floating {
+@keyframes float {
     0%, 100% {
-        transform: translateY(0) rotate(2deg);
+        transform: translateY(0);
     }
 
     50% {
-        transform: translateY(-10px) rotate(2deg);
+        transform: translateY(-10px);
     }
 }
 
@@ -490,51 +503,7 @@ section {
     color: white;
 }
 
-.floating-label {
-    position: absolute;
 
-    padding: 9px 15px;
-
-    background: var(--cream);
-
-    border: 1px solid var(--border);
-
-    font-size: 10px;
-    letter-spacing: 2px;
-border:1px dashed #26352c;
-    box-shadow: var(--shadow);
-
-    animation: float 4s ease-in-out infinite;
-}
-
-.label-one {
-    top: 80px;
-    left: -35px;
-}
-
-.label-two {
-    right: -30px;
-    top: 240px;
-
-    animation-delay: 1s;
-}
-
-.label-three {
-    left: -20px;
-    bottom: 70px;
-
-    animation-delay: 2s;
-}
-
-@keyframes float {
-    0%, 100% {
-        transform: translateY(0);
-    }
-
-    50% {
-        transform: translateY(-10px);
-    }
-}
 
 
 
@@ -724,89 +693,6 @@ border:1px dashed #26352c;
 }
 
 
-
-/* ================= SKILL BARS ================= */
-
-.skill-bars-section {
-    padding: 40px 20px;
-}
-
-.skill {
-    max-width: 650px;
-    margin: 0 auto 22px;
-}
-
-.skill-info {
-    width: 70%;
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 8px;
-    color: var(--olive-dark);
-}
-
-.skill-bar {
-    width: 70%;
-    height: 8px;
-    background: var(--olive-light);
-    border-radius: 10px;
-    overflow: hidden;
-}
-
-.skill-fill {
-    height: 100%;
-    background: var(--olive);
-    border-radius: 10px;
-    animation: fillBar 1.5s ease forwards;
-    transform-origin: left;
-    transform: scaleX(0);
-}
-
-@keyframes fillBar {
-    from {
-        transform: scaleX(0);
-    }
-
-    to {
-        transform: scaleX(1);
-    }
-}
-
-.responsive {
-    width: 80%;
-}
-
-.styling {
-    width: 75%;
-}
-
-.javascript {
-    width: 50%;
-}
-
-
-/* ================= PROJECT ANIMATION ================= */
-
-@keyframes revealUp {
-    from {
-        opacity: 0;
-        transform: translateY(60px);
-    }
-
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-
-/* ================= MOBILE SKILL BARS ================= */
-
-@media screen and (max-width: 480px) {
-    .skill-info,
-    .skill-bar {
-        width: 100%;
-    }
-}
 
 
 
